@@ -1,0 +1,49 @@
+/* The same layout with floats ► https://codepen.io/Rafiozoo/pen/BYVOeg */
+/* IE / Edge support with SVG ► https://codepen.io/Rafiozoo/pen/MQBZbd */
+IMG {
+	width: 100%;
+	display: block;
+}
+.item IMG {
+	visibility: hidden;
+}
+
+.item {
+	width: 6rem;
+	height: 6rem;
+	position: relative;
+
+	/* Default - simple fallback when no CSS Grid support */
+
+}
+.item::before { /* Goldenrod outline on the hexagon */
+	content: "";
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+background-image: url("./bees.jpg");
+background-size: contain;
+	clip-path: polygon(50% 0, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+	transform: scale(1.077);
+	transition: transform 0.3s;
+}
+.item:hover::before {
+	transform: scale(1.154);
+}
+
+
+.blank {
+  display: inline-block;
+  align-self: start;
+}
+		.container {
+			display: grid;
+
+      grid-template-columns: repeat(auto-fill, minmax(2rem, 1fr));
+      column-gap: 4rem;
+      /* column-gap: 4rem; */
+      grid-template-rows: repeat();
+    }
+
+    .item:nth-child(even) {
+      margin: -1rem 0rem -1rem 3rem;
+    }
