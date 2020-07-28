@@ -1,0 +1,61 @@
+.container{
+
+margin: auto;
+
+}
+
+/*
+On hover, it gets bigger with a bounce
+
+*/
+
+.btn-outer{
+    border: 2px solid blue;
+    text-align: center;
+    margin-top: 200px;
+    height: 200px;
+
+}
+.button04{
+    height: 5em;
+    width: 8em;
+    margin: auto;
+opacity: 0.7;
+    background-image:
+    linear-gradient(
+      to right,
+      red, #f06d06
+    );
+
+    border-radius: 0.8em;
+    box-shadow: 0 0 0 2em #F4AAB9,
+    0 0 0 4em #66CCFF;
+}
+
+.button04:hover{
+    cursor: pointer;
+    animation-name: pulse_button;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes pulse_button {
+    0%, 100%, 20%, 50%, 80% {
+        transform: translate3d(0,0,0);
+        /* height: 2em;
+        width: 4em; */
+    }
+    40% {
+        /* height: 7em;
+        width: 9em; */
+        transform: translate3d(0, -30px, 0px);
+        box-shadow: 20px 10px 10px black;
+
+    }
+    60% {
+        transform:translate3d(0, -15px, 0px);
+        /* height: 3em;
+        width: 5em; */
+    }
+}
